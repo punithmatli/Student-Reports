@@ -1,0 +1,22 @@
+.Pass {
+    color:black;
+}
+
+.Fail {
+    color:red;
+}
+
+.Topper {
+    color: green;
+}
+
+table {
+    border: 2px solid black;
+    text-align: left;
+    padding: 0;
+    margin: 2px;
+}
+th, td {
+    padding: 2px;
+    border: 0.5px solid black;
+}
