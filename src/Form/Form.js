@@ -63,6 +63,9 @@ class Form extends Component {
                 if (!fields["yearofpassing"].match(/^[0-9]+$/)) {
                     this.setState({ errorYearOfPassing: "Only Numbers are allowed", formIsValid: false });
                 }
+                else if (this.state.fields["yearofpassing"] > 2017) {
+                    this.setState({ errorYearOfPassing: "Year cannot be grater than 2017", formIsValid: false });
+                }
                 else {
                     this.setState({ errorYearOfPassing: null });
                 }
@@ -128,7 +131,7 @@ class Form extends Component {
                             <br />
                         </fieldset>
                         <fieldset>
-                            <button type="submit">Submit</button>
+                            <button type="submit" disabled={!this.state.formIsValid}>Submit</button>
                         </fieldset>
                     </div>
 
